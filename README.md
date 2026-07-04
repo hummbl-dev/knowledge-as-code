@@ -30,6 +30,7 @@
 - Schema: [`schemas/knowledge-as-code-v0.1.json`](schemas/knowledge-as-code-v0.1.json)
 - Example: [`examples/claim-record-v0.1.example.json`](examples/claim-record-v0.1.example.json)
 - Fixtures: [`fixtures/valid/claim-record-v0.1.valid.json`](fixtures/valid/claim-record-v0.1.valid.json), [`fixtures/invalid/claim-record-v0.1.invalid.json`](fixtures/invalid/claim-record-v0.1.invalid.json)
+- Receipt: [`receipts/knowledge-as-code-v0.1-packet-receipt.md`](receipts/knowledge-as-code-v0.1-packet-receipt.md)
 
 ## Status
 

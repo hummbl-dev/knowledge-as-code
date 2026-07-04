@@ -31,7 +31,7 @@
       "statement": "Each claim includes a validation and review artifact.",
       "source": "hummbl-dev/knowledge-as-code",
       "evidence": [
-        "receipts/claim-record-v0.1-packet-receipt.md"
+        "receipts/knowledge-as-code-v0.1-packet-receipt.md"
       ],
       "confidence": "medium",
       "status": "proposed",
