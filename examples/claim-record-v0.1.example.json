@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "v0.1",
+  "packetStatus": "v0.1-draft",
+  "knowledgeManifest": {
+    "id": "knowledge-as-code/claim-record-v1",
+    "title": "Knowledge claim packet",
+    "version": 1,
+    "scope": "governed-knowledge",
+    "description": "A minimal set of claims with explicit source, confidence, and status for acceptance."
+  },
+  "authority": {
+    "owner": "knowledge-as-code",
+    "canActOnBehalfOf": ["knowledge_owner", "research_owner"]
+  },
+  "claims": [
+    {
+      "id": "claim-activity-taxonomy",
+      "statement": "Compendium MET values are represented as sourced, mapped claims.",
+      "source": "compendium-as-code/source-ingest-v1",
+      "evidence": [
+        "fixtures/valid/claim-record-v0.1.valid.json"
+      ],
+      "confidence": "high",
+      "status": "accepted",
+      "retrievedAt": "2026-07-01T00:00:00Z",
+      "transform": "lineage-map-v0.1",
+      "interpretation": "Sourced and bounded to upstream provenance."
+    },
+    {
+      "id": "claim-versioning",
+      "statement": "Each claim includes a validation and review artifact.",
+      "source": "hummbl-dev/knowledge-as-code",
+      "evidence": [
+        "receipts/knowledge-as-code-v0.1-packet-receipt.md"
+      ],
+      "confidence": "medium",
+      "status": "proposed",
+      "retrievedAt": "2026-07-02T00:00:00Z",
+      "transform": "simple-annotation",
+      "interpretation": "Governed claim structure only; no domain canon."
+    }
+  ],
+  "receiptRequirements": {
+    "source": "source-receipt.v0.1",
+    "retrieval": "retrieval-receipt.v0.1",
+    "transform": "transform-receipt.v0.1",
+    "claimStatus": "claim-status-receipt.v0.1",
+    "review": "review-receipt.v0.1",
+    "acceptedState": "accepted-state-receipt.v0.1",
+    "exception": "exception-receipt.v0.1"
+  },
+  "adjacentRepos": [
+    "compendium-as-code",
+    "protocol-as-code",
+    "governance-as-code",
+    "compliance-as-code"
+  ]
+}

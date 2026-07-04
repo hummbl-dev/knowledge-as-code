@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/hummbl-dev/knowledge-as-code/main/schemas/knowledge-as-code-v0.1.json",
+  "title": "Knowledge-as-Code v0.1 Packet",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "packetStatus",
+    "knowledgeManifest",
+    "authority",
+    "claims",
+    "receiptRequirements"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "v0.1"
+    },
+    "packetStatus": {
+      "type": "string",
+      "enum": ["seed", "v0.1-draft", "validated-example", "v0.1-packet"]
+    },
+    "knowledgeManifest": {
+      "type": "object",
+      "required": ["id", "title", "version", "scope"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9\\-]*/[a-z0-9][a-z0-9\\-]*$"
+        },
+        "title": {
+          "type": "string"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "scope": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "authority": {
+      "type": "object",
+      "required": ["owner", "canActOnBehalfOf"],
+      "properties": {
+        "owner": {
+          "type": "string"
+        },
+        "canActOnBehalfOf": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "statement", "source", "confidence", "status"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9\\-]+$"
+          },
+          "statement": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["proposed", "accepted", "rejected", "needs-review"]
+          },
+          "retrievedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "transform": {
+            "type": "string"
+          },
+          "interpretation": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "receiptRequirements": {
+      "type": "object",
+      "required": ["source", "retrieval", "transform", "claimStatus", "review", "acceptedState"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retrieval": {
+          "type": "string",
+          "minLength": 1
+        },
+        "transform": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claimStatus": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acceptedState": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exception": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "adjacentRepos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

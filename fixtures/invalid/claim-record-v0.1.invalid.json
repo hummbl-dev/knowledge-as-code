@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "v0.1",
+  "packetStatus": "validated-example",
+  "knowledgeManifest": {
+    "id": "knowledge-as-code/claim-record-v1",
+    "title": "Invalid knowledge claim packet",
+    "version": 0,
+    "scope": "governed-knowledge"
+  },
+  "authority": {
+    "owner": "knowledge-as-code",
+    "canActOnBehalfOf": []
+  },
+  "claims": [
+    {
+      "id": "claim-activity-taxonomy",
+      "statement": "Unverified assertion.",
+      "source": "",
+      "confidence": "low",
+      "status": "accepted",
+      "retrievedAt": "2026-01-01"
+    }
+  ],
+  "receiptRequirements": {
+    "source": "",
+    "retrieval": "retrieval-receipt.v0.1",
+    "transform": "",
+    "claimStatus": "claim-status-receipt.v0.1",
+    "review": "",
+    "acceptedState": "accepted-state-receipt.v0.1"
+  }
+}
