@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "v0.1",
+  "packetStatus": "validated-example",
+  "knowledgeManifest": {
+    "id": "knowledge-as-code/claim-record-v1",
+    "title": "Knowledge claim packet",
+    "version": 1,
+    "scope": "governed-knowledge"
+  },
+  "authority": {
+    "owner": "knowledge-as-code",
+    "canActOnBehalfOf": ["knowledge_owner"]
+  },
+  "claims": [
+    {
+      "id": "claim-activity-taxonomy",
+      "statement": "Compendium MET values are represented as sourced claims.",
+      "source": "compendium-as-code/source-ingest-v1",
+      "confidence": "high",
+      "status": "accepted",
+      "retrievedAt": "2026-07-01T00:00:00Z"
+    }
+  ],
+  "receiptRequirements": {
+    "source": "source-receipt.v0.1",
+    "retrieval": "retrieval-receipt.v0.1",
+    "transform": "transform-receipt.v0.1",
+    "claimStatus": "claim-status-receipt.v0.1",
+    "review": "review-receipt.v0.1",
+    "acceptedState": "accepted-state-receipt.v0.1"
+  }
+}

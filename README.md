@@ -20,6 +20,19 @@
 - This repo is not legal, security, compliance, or operational advice.
 - This repo does not canonize HUMMBL/BaseN/Ownward concepts unless explicitly marked and audited.
 
+## Packet status
+
+- `seed` -> `v0.1-draft`
+
+## v0.1 packet locations
+
+- Boundary: [`docs/v0.1-boundary.md`](docs/v0.1-boundary.md)
+- Schema: [`schemas/knowledge-as-code-v0.1.json`](schemas/knowledge-as-code-v0.1.json)
+- Example: [`examples/claim-record-v0.1.example.json`](examples/claim-record-v0.1.example.json)
+- Fixtures: [`fixtures/valid/claim-record-v0.1.valid.json`](fixtures/valid/claim-record-v0.1.valid.json), [`fixtures/invalid/claim-record-v0.1.invalid.json`](fixtures/invalid/claim-record-v0.1.invalid.json)
+
 ## Status
 
 Early public seed repository.
+
+Public seed repository. Initial executable packet in progress as `seed` -> `v0.1-draft`.
