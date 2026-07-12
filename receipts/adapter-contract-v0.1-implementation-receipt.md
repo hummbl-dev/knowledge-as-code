@@ -3,6 +3,7 @@
 - Repository: `hummbl-dev/knowledge-as-code`
 - Issue: `#10`
 - Program ledger: `hummbl-dev/hummbl-research#67`
+- Draft PR: `#11`
 - Status: `IMPLEMENTED_ON_BRANCH_PENDING_NON_AUTHOR_REVIEW`
 - Fact posture: local execution only; no merge, GitHub Actions, or live provider conformance is claimed.
 
@@ -21,6 +22,16 @@ Observed on Python `3.13.5`:
 - valid structural fixtures: `5/5 PASS`;
 - invalid/adversarial fixtures: `8/8 correctly rejected`.
 
+Supplemental local schema audit using `jsonschema 4.26.0`:
+
+- manifest, result, and receipt components across all five valid patterns: `15/15 with 0 validation errors`.
+
+Connector-side diff review:
+
+- branch is ahead of `main` with no unrelated files;
+- seven intended files changed;
+- GitHub reported no commit status checks at the time of review.
+
 ## Remaining gates
 
-Non-author interface/threat-model review, compatibility review with Universal Source Registry and `execution-receipts`, live provider bindings, and governed PR merge decision.
+Non-author interface/threat-model review, compatibility review with Universal Source Registry and `execution-receipts`, repository checks if configured, live provider bindings, and governed PR merge decision.
