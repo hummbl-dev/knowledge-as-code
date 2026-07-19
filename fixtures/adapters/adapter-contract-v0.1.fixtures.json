@@ -1,0 +1,20 @@
+{
+  "schema_version": "adapter_fixture_spec.v0.1",
+  "valid": [
+    "scholarly_api",
+    "versioned_repository",
+    "archive_item",
+    "multimedia_item",
+    "private_connector"
+  ],
+  "invalid": [
+    {"name": "partial_as_complete", "base": "scholarly_api", "mutation": "partial_as_complete"},
+    {"name": "unsupported_success", "base": "scholarly_api", "mutation": "unsupported_success"},
+    {"name": "rate_limit_as_success", "base": "scholarly_api", "mutation": "rate_limit_as_success"},
+    {"name": "stale_as_current", "base": "scholarly_api", "mutation": "stale_as_current"},
+    {"name": "checksum_mismatch_as_success", "base": "scholarly_api", "mutation": "checksum_mismatch_as_success"},
+    {"name": "private_public_confusion", "base": "private_connector", "mutation": "private_public_confusion"},
+    {"name": "live_validation_without_receipt", "base": "scholarly_api", "mutation": "live_validation_without_receipt"},
+    {"name": "receipt_summary_mismatch", "base": "scholarly_api", "mutation": "receipt_summary_mismatch"}
+  ]
+}
